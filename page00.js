@@ -1,21 +1,5 @@
 function page00s01(){
-  var wH = cman_calH("DISP", "2");  // 高さ1/2の計算
-  var wW = cman_calW("DISP", "2");  // 横幅1/2の計算
-  var wT = cman_calT("DISP", "CC", wH);  // モニター中央 Top計算
-  var wL = cman_calL("DISP", "CC", wW);  // モニター中央 Left計算
-  var wOption = "top=" + wT + ", left=" + wL + ", height=" + wH + ", width=" + wW;
-
-  // 画面を開く
-  var winObj = window.open("https://main.d2wj7md4yan98g.amplifyapp.com/page001.html", "_blank", wOption);
-  winObj.focus();
-
-  try{
-    winObj.resizeTo(wW,wH);
-    winObj.moveTo(wL,wT);
-    } catch(e){
-  }
-
-  delete winObj;
+  alert("Click"); 
 }
 
 // -----------------------------------------
