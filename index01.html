@@ -2,7 +2,7 @@
 <html lang="ja">
 
 <head>
-    <title>Mega Able bootstrap admin template by codedthemes </title>
+    <title>福祉車両送迎デモ</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -385,50 +385,125 @@
                             <!-- Main-body start -->
                             <div class="main-body">
                                 <div class="page-wrapper">
-                                    <!-- Page-body start -->
-                                    <div class="page-body">
-                                        <div class="row">
+<!-- Page-body start -->
 
-  
-                                         <!-- task, page, download counter  start -->
-                                            <div class="col-xl-6 col-md-6">
-                                                <div class="card">
-                                                    <div class="card-block">
-                                                        <div class="row align-items-center">
-                                                            <div class="col-8">
-                                                                <h5 class="text-c-purple">
-                                                                本日の対象（未割当）
-                                                                </h5>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-6 col-md-6">
-                                                <div class="card">
-                                                    <div class="card-block">
-                                                        <div class="row align-items-center">
-                                                            <div class="col-8">
-                                                                <h5 class="text-c-purple">
-                                                                配車状況
-                                                                </h5>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                            
-                                            <!-- task, page, download counter  end -->
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-header-left">
+                    <h5 class="text-c-purple">本日の対象（未割当）</h5>
+                </div>
+            </div>
+            <div class="card-block">
+                <!-- button Default -->
+                <button class="btn waves-effect waves-light btn-primary btn-outline-primary">自動割当</button>
+                <p></p>
+                <!-- Data -->  
+                <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>名前</th>
+                                                                <th>住所</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Aさん</td>
+                                                                <td>中村区〇〇</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Bさん</td>
+                                                                <td>中区〇〇</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Cさん</td>
+                                                                <td>中区〇〇</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Dさん</td>
+                                                                <td>熱田区〇〇</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Eさん</td>
+                                                                <td>熱田区〇〇</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+            
+            <!--card-block -->
+            </div>
+            
+        </div>
+    </div>
+    <!-- Border button -->
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-header-left">
+                    <h5 class="text-c-purple">配車状況</h5>
+                </div>
+               
+            </div>
+            <div class="card-block">
+                <!-- button Default -->
+                
+                <button class="btn waves-effect waves-light btn-primary btn-outline-primary">予測時間再計算</button>
+               <button class="btn waves-effect waves-light btn-primary btn-outline-primary">配車の確定　</button>
+            　　<p></p>
+                <!-- Data -->  
+                <label ><h6>1号車　予測時間〇〇分</h6></label>
+                <p></p>
+                <table class="table">
+                                                        
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Aさん</td>
+                                                                <td>中村区〇〇</td>
+                                                            </tr>
+                                                           
+                                                        </tbody>
+                                                    </table>
+                <p></p>
+                <!-- Data -->  
+                <label ><h6>2号車　予測時間〇〇分</h6></label>
+                <p></p>
+                <table class="table">
+                                                       
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Aさん</td>
+                                                                <td>中村区〇〇</td>
+                                                            </tr>
+                                                           
+                                                        </tbody>
+                                                    </table>
+                <p></p>
+                <!-- Data --> 
+                <label ><h6>3号車　予測時間〇〇分</h6></label>
+                <p></p> 
+                <table class="table">
+                                                       
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Aさん</td>
+                                                                <td>中村区〇〇</td>
+                                                            </tr>
+                                                           
+                                                        </tbody>
+                                                    </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+                                
     
                                             <!--  sale analytics start -->
                                             <div class="col-xl-12 col-md-12">
                                                 <div class="card">
  　　　　　　　　　　　　　　　　　　　　　　　　　　　<button type="button" id="drawMap" class="btn btn-outline-primary" onclick="drawMap()">
-          　　　　　　　　　　　　　　　　　　　　　　　<h4>配車状況表示</h4>
+          　　　　　　　　　　　　　　　　　　　　　　　配車状況表示
         　　　　　　　　　　　　　　　　　　　　　　　</button>
 
         　　　　　　　　　　　　　　　　　　　　　　　<p></p>
