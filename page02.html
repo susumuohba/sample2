@@ -36,6 +36,40 @@
         <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
       <!-- Style.css -->
       <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      
+       <!-- ADD MAP -->
+     <style type="text/css">
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;
+        /* The height is 400 pixels */
+        width: 100%;
+        /* The width is the width of the web page */
+      }
+    </style>
+
+      <script>
+      // Initialize and add the map
+
+     let directionsService ;
+     let directionsRenderer ;
+
+     let map ;
+     let listener1 ;
+
+     // クリックした位置を保存する変数
+     let g_lat_lng ;
+
+     function initMap() {
+        // The location of Uluru
+        const uluru = { lat: 35.172808, lng: 136.89019  };
+        // The map, centered at Uluru
+        map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 15,
+          center: uluru,
+        });
+      }
+   </script>
   </head>
 
   <body>
@@ -200,7 +234,7 @@
                           
                           <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">管理者メニュ</div>
                           <ul class="pcoded-item pcoded-left-item">
-                              <li class="active">
+                              <li >
                                   <a href="index.html" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.dash.main">スケジュール設定</span>
@@ -224,8 +258,8 @@
                            </ul>
                           <div class="pcoded-navigation-label" data-i18n="nav.category.forms">車両メニュ</div>
                           <ul class="pcoded-item pcoded-left-item">
-                              <li>
-                                  <a href="index03.html" class="waves-effect waves-dark">
+                              <li class="active">
+                                  <a href="page02.html" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.form-components.main">送迎</span>
                                       <span class="pcoded-mcaret"></span>
@@ -244,7 +278,7 @@
                               <div class="row align-items-center">
                                   <div class="col-md-8">
                                       <div class="page-header-title">
-                                          <h5 class="m-b-10">スケジュール設定</h5>
+                                          <h5 class="m-b-10">送迎</h5>
                                       </div>
                                   </div>
                               </div>
@@ -257,114 +291,115 @@
                                 <div class="page-wrapper">
                                     <!-- Page-body start -->
                                     <div class="page-body">
-                                        <div class="row">
-                                            <!-- task, page, download counter  start -->
-                                            
-    
+
                                             <!--  sale analytics start -->
                                             <div class="col-xl-12 col-md-12">
                                                 <div class="card">
                                                     <div class="card-header">
-                                                        2021年7月
-                                                        <div class="container-fluid">
+                                                     <div class="card-header-left">
+                                                         <h5>2021年7月4日</h5>
                                                     </div>
-                                        
-         <!-- Contextual classes table starts -->
-                                       
-                                            <!-- div class="card-block table-border-style" -->
-                                                <div class="table-responsive">
-                                                    <table class="table"　onclick="page00s01()">
-                                                        <thead>
-                                                            <tr align="center">
-                                                                <th  class="text-center">日曜日</th>
-                                                                <th  class="text-center">月曜日</th>
-                                                                <th  class="text-center">火曜日</th>
-                                                                <th  class="text-center">水曜日</th>
-                                                                <th  class="text-center">木曜日</th>
-                                                                <th  class="text-center">金曜日</th>
-                                                                <th  class="text-center">土曜日</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr class="table-active">
-                                                                <td  class="text-center">
-                                                                27日<br>15人
-                                                                </td>
-                                                                <td  class="text-center">28日<br>10人
-                                                                </td>
-                                                                <td  class="text-center">29日<br>10人
-                                                                </td>
-                                                                <td  class="text-center">30日<br>10人
-                                                                </td>
-                                                                <td  class="text-center">1日<br>10人
-                                                                </td>
-                                                                <td  class="text-center">2日<br>10人
-                                                                </td>
-                                                                <td  class="text-center">3日<br>15人
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                               <td >
-                                                                <button class="btn waves-effect waves-light btn-danger btn-outline-danger btn-block"  onClick="page00s01()" >4日<br>15人</button>
-                                                                </td>
-                                                                <td >
-                                                                <button class="btn waves-effect waves-light btn-primary btn-outline-primary btn-block"  onClick="page00s01()">5日<br>8人</button>
-                                                                </td>
-                                                                <td>
-                                                                 <button class="btn waves-effect waves-light btn-primary btn-outline-primary btn-block"  onClick="page00s01()">6日<br>9人</button>
-                                                                </td>
-                                                                <td>
-                                                                <button class="btn waves-effect waves-light btn-primary btn-outline-primary btn-block "  onClick="page00s01()">7日<br>7人</button>
-                                                                </td>
-                                                                <td>
-                                                                <button class="btn waves-effect waves-light btn-primary btn-outline-primary btn-block"  onClick="page00s01()">8日<br>6人</button>
-                                                                </td>
-                                                                <td>
-                                                                <button class="btn waves-effect waves-light btn-danger btn-outline-danger btn-block"  onClick="page00s01()">9日<br>10人</button>
-                                                                </td>
-                                                                <td>
-                                                                <button class="btn waves-effect waves-light btn-primary btn-outline-primary btn-block"  onClick="page00s01()">10日<br>10人</button>
-                                                                </td>
-                                                            </tr>
-                                                           <tr>
-                                                               <td  class="text-center">
-                                                                <button class="btn waves-effect waves-light btn-primary btn-outline-primary btn-block"  onClick="page00s01()">11日<br>10人</button>
-                                                                </td>
-                                                                <td>
-                                                                <button class="btn waves-effect waves-light btn-primary btn-outline-primary btn-block"  onClick="page00s01()">12日<br>8人</button>
-                                                                </td>
-                                                                <td>
-                                                                <button class="btn waves-effect waves-light btn-primary btn-outline-primary btn-block"  onClick="page00s01()">13日<br>7人</button>
-                                                                </td>
-                                                                <td >
-                                                                <button class="btn waves-effect waves-light btn-primary btn-outline-primary btn-block"  onClick="page00s01()">14日<br>8人</button>
-                                                                </td>
-                                                                <td>
-                                                                 <button class="btn waves-effect waves-light btn-primary btn-outline-primary btn-block"  onClick="page00s01()">15日<br>8人</button>
-                                                                </td>
-                                                                <td>
-                                                                <button class="btn waves-effect waves-light btn-primary btn-outline-primary btn-block"  onClick="page00s01()">16日<br>8人</button>
-                                                                </td>
-                                                                <td>
-                                                                <button class="btn waves-effect waves-light btn-primary btn-outline-primary btn-block"  onClick="page00s01()">17日<br>8人</button>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
+                                                <div class="card-header-right">
+                                                    <button class="btn waves-effect waves-light btn-primary btn-outline-primary btn-sm">お客さまを追加</button>
                                                 </div>
-                                            <!--/div -->
-                                        </div>
-                                        <!-- Contextual classes table ends -->
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                            
-                                            <!--  sale analytics end -->
-    
-                                            
-                                        </div>
-                                    </div>
+            　                               <p></p>
+                
+                                             <!-- 　-->
+                                             <table class="table" id="undefPeople">
+                                                      <thead>
+            <td>
+              お名前
+            </td>
+            <td>
+              住所
+            </td>
+            <td>
+              予想到着時間
+            </td>
+            <td>
+              <h4></h4>
+            </td>
+           </thead>
+
+        　 <tbody>
+           <tr>
+            <td>
+              Aさん
+            </td>
+            <td>
+              中村区○○○○
+            </td>
+            <td>
+              〇〇時〇〇分
+            </td>
+            <td>
+            <button type="button" id="btn" class="btn btn-outline-primary btn-mini">送迎完了</button>
+            </td>
+          </tr>
+
+           <tr>
+            <td>
+             Bさん
+            </td>
+            <td>
+             中区○○○○
+            </td>
+            <td>
+              〇〇時〇〇分
+            </td>
+            <td>
+            <button type="button" id="btn" class="btn btn-outline-primary btn-mini">送迎完了</button>
+            </td>
+            </tr>
+
+          <tr>
+            <td>
+               Cさん
+            </td>
+            <td>
+               中区○○○○
+            </td>
+            <td>
+              〇〇時〇〇分
+            </td>
+            <td>
+            <button type="button" id="btn" class="btn btn-outline-primary btn-mini">送迎完了</button>
+            </td>
+          </tr>
+
+           <tr>
+            <td>
+               Dさん
+            </td>
+            <td>
+              熱田区○○○○
+            </td>
+            <td>
+              〇〇時〇〇分
+            </td>
+            <td>
+            <button type="button" id="btn" class="btn btn-outline-primary btn-mini">送迎完了</button>
+            </td>
+          </tr>
+
+       </tbody>
+       </table>
+
+       <button type="button" id="btn" class="btn btn-outline-primary btn-sm">地図表示</button>
+　　　　<p></p>
+       <div class="card">
+       <div id="map"></div>
+       <p></p>
+
+        </div>  
+                
+
+       </div>
+
+       <!--- -->
+
+
+       
                                     <!-- Page-body end -->
                                 </div>
                                 <div id="styleSelector"> </div>
@@ -422,7 +457,12 @@
     
     <!-- Required Jquery -->
 
-    <script src="./page00.js"></script>
+      <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgIA_8Jyvo8LMa8J2yS5RemoZkzOBkULI&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+
+    <script src="./page02.js"></script>
 
     <script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery-ui/jquery-ui.min.js "></script>
