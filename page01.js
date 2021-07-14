@@ -118,5 +118,82 @@ function test2(){
     let tableElem = document.getElementById("undefPeople");
         
     alert(tableElem); 
+    
+     // 固定でいくつかのデータを追加する
+        
+     /**************************************************************/
+     // Aテーブル
+     let tableElemA = document.getElementById("car1");
+        
+     // tbody要素にtr要素（行）を最後に追加   
+     let trElemA = tableElemA.tBodies[0].insertRow(-1);
+        
+     // td要素を追加
+     let cellElemA = trElemA.insertCell(0);
+        
+     //td要素にテキストを追加
+     cellElemA.appendChild(document.createTextNode('Aさん'));
+        
+     // td要素を追加
+     let cellElemA2 = trElemA.insertCell(1);
+
+     //td要素にテキストを追加
+     cellElemA2.appendChild(document.createTextNode('中村区○○○○'));
+
+     // tbody要素にtr要素（行）を最後に追加   
+     let trElemAA = tableElemA.tBodies[0].insertRow(-1);
+        
+     // td要素を追加
+     let cellElemAA = trElemAA.insertCell(0);
+        
+     //td要素にテキストを追加
+     cellElemAA.appendChild(document.createTextNode('Dさん'));
+        
+     // td要素を追加
+     let cellElemAA2 = trElemAA.insertCell(1);
+
+     //td要素にテキストを追加
+     cellElemAA2.appendChild(document.createTextNode('熱田区○○○○'));
+
+
+     /**************************************************************/
+     // Bテーブル
+     let tableElemB = document.getElementById('car2');
+        
+     // tbody要素にtr要素（行）を最後に追加   
+     let trElemB = tableElemB.tBodies[0].insertRow(-1);
+        
+     // td要素を追加
+     let cellElemB = trElemB.insertCell(0);
+        
+     //td要素にテキストを追加
+     cellElemB.appendChild(document.createTextNode('Bさん'));
+        
+     // td要素を追加
+     let cellElemB2 = trElemB.insertCell(1);
+
+     //td要素にテキストを追加
+     cellElemB2.appendChild(document.createTextNode('中区○○○○'));
+     
+     /**************************************************************/
+     // Cテーブル
+     let tableElemC = document.getElementById('car3');
+        
+     // tbody要素にtr要素（行）を最後に追加   
+     let trElemC = tableElemC.tBodies[0].insertRow(-1);
+        
+     // td要素を追加
+     let cellElemC = trElemC.insertCell(0);
+        
+     //td要素にテキストを追加
+     cellElemC.appendChild(document.createTextNode('Cさん'));
+        
+     // td要素を追加
+     let cellElemC2 = trElemC.insertCell(1);
+
+     //td要素にテキストを追加
+     cellElemC2.appendChild(document.createTextNode('中区○○○○'));
+    
+    }
         
 }
