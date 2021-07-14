@@ -112,3 +112,11 @@ directionsRenderer2.setOptions({
 function clicktr(){
    document.getElementById("tr1").style.backgroundColor="#E5EDFD";
 }
+<!---- --->
+function test2(){
+   altert("test2");
+    let tableElem = document.getElementById("undefPeople");
+        
+    alert(tableElem); 
+        
+}
