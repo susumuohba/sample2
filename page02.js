@@ -130,19 +130,8 @@
           }
        })
      // End Function
-     }
-
+    }
+    
 // 
 
-//
-
-
-function addCustomer(){
- 
-
-  // 画面を開く
-  var winObj = window.open("https://main.d35izeq5gia0sv.amplifyapp.com/page022.html", "_blank");
-  
-  delete winObj;
-}
 
