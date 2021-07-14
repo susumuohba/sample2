@@ -114,7 +114,7 @@ function clicktr(){
 }
 <!---- --->
 function test2(){
-   altert("test2");
+   alert("test2");
     let tableElem = document.getElementById("undefPeople");
         
     alert(tableElem); 
