@@ -17,7 +17,7 @@
       <meta name="keywords" content="" />
       <meta name="author" content="codedthemes" />
       <!-- Favicon icon -->
-      <!-- link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"-->
+      <!-- link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" -->
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
     <!-- waves.css -->
@@ -36,52 +36,7 @@
         <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
       <!-- Style.css -->
       <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-      
-       <!-- ADD MAP -->
-     <style type="text/css">
-      /* Set the size of the div element that contains the map */
-      #map {
-        height: 400px;
-        /* The height is 400 pixels */
-        width: 100%;
-        /* The width is the width of the web page */
-      }
-    </style>
 
-      <script>
-      // Initialize and add the map
-
-     let directionsService ;
-     let directionsRenderer ;
-
-     let map ;
-     let listener1 ;
-
-     // クリックした位置を保存する変数
-     let g_lat_lng ;
-
-     function initMap() {
-        // The location of Uluru
-        const uluru = { lat: 35.172808, lng: 136.89019  };
-        // The map, centered at Uluru
-        map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 15,
-          center: uluru,
-        });
-      }
-   </script>
-
-    <script>
-    function addCustomer(){
-       // 画面を開く
-  var winObj = window.open("https://main.d35izeq5gia0sv.amplifyapp.com/ndex02.html", "_blank");
-  winObj.focus();
-
-  delete winObj;
-    }  
-    </script>
-
-  </head>
 
   <body>
   <!-- Pre-loader start -->
@@ -245,7 +200,7 @@
                           
                           <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">管理者メニュ</div>
                           <ul class="pcoded-item pcoded-left-item">
-                              <li >
+                              <li>
                                   <a href="index.html" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.dash.main">スケジュール設定</span>
@@ -269,7 +224,7 @@
                            </ul>
                           <div class="pcoded-navigation-label" data-i18n="nav.category.forms">車両メニュ</div>
                           <ul class="pcoded-item pcoded-left-item">
-                              <li class="active">
+                              <li>
                                   <a href="page02.html" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.form-components.main">送迎</span>
@@ -289,7 +244,7 @@
                               <div class="row align-items-center">
                                   <div class="col-md-8">
                                       <div class="page-header-title">
-                                          <h5 class="m-b-10">送迎</h5>
+                                          <h5 class="m-b-10">お客さまの追加</h5>
                                       </div>
                                   </div>
                               </div>
@@ -300,118 +255,194 @@
                             <!-- Main-body start -->
                             <div class="main-body">
                                 <div class="page-wrapper">
-                                    <!-- Page-body start -->
-                                    <div class="page-body">
-
-                                            <!--  sale analytics start -->
-                                            <div class="col-xl-12 col-md-12">
-                                                <div class="card">
+　　　　　　　　　　　　　　　　　　<!-- Page-body start -->
+　　　　　　　　　　　　　　　　　　<!-- -->
+  <!--  project and team member start -->
+                                            <div class="col-xl-8 col-md-12">
+                                                <div class="card table-card">
                                                     <div class="card-header">
-                                                     <div class="card-header-left">
-                                                         <h5>2021年7月4日</h5>
+                                                        <h5>お客さまの追加</h5>
+                                                        <div class="card-header-right">
+                                                        
+                                                         <input type="text" name="footer-email" required="">
+                                                         <button class="btn waves-effect waves-light btn-primary btn-outline-primary btn-sm">お客さまの名前で検索</button>
+                                                        <button class="btn waves-effect waves-light btn-primary btn-outline-primary btn-sm">選択したお客さまを追加</button>
+                                                        </div>
                                                     </div>
-                                                <div class="card-header-right">
-                                                    <button class="btn waves-effect waves-light btn-primary btn-outline-primary btn-sm" onclick="addCustomer()">お客さまを追加</button>
+                                                    <div class="card-block">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover">
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>
+                                                                        <div class="chk-option">
+                                                                            <div class="checkbox-fade fade-in-primary">
+                                                                                <label class="check-task">
+                                                                                    <input type="checkbox" value="">
+                                                                                    <span class="cr">
+                                                                                            <i class="cr-icon fa fa-check txt-default"></i>
+                                                                                        </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    名前</th>
+                                                                    <th>住所</th>
+                                                                    
+                                                             
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="chk-option">
+                                                                            <div class="checkbox-fade fade-in-primary">
+                                                                                <label class="check-task">
+                                                                                    <input type="checkbox" value="">
+                                                                                    <span class="cr">
+                                                                                                <i class="cr-icon fa fa-check txt-default"></i>
+                                                                                            </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="d-inline-block align-middle">
+                                                                            
+                                                                            <div class="d-inline-block">
+                                                                                <h6>John Deo</h6>
+                                                                               
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>Able Pro</td>
+                                                             
+                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="chk-option">
+                                                                            <div class="checkbox-fade fade-in-primary">
+                                                                                <label class="check-task">
+                                                                                    <input type="checkbox" value="">
+                                                                                    <span class="cr">
+                                                                                                <i class="cr-icon fa fa-check txt-default"></i>
+                                                                                            </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="d-inline-block align-middle">
+                                                                           
+                                                                            <div class="d-inline-block">
+                                                                                <h6>Jenifer Vintage</h6>
+                                                                               
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>Mashable</td>
+                                                                    
+                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="chk-option">
+                                                                            <div class="checkbox-fade fade-in-primary">
+                                                                                <label class="check-task">
+                                                                                    <input type="checkbox" value="">
+                                                                                    <span class="cr">
+                                                                                                <i class="cr-icon fa fa-check txt-default"></i>
+                                                                                            </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="d-inline-block align-middle">
+                                                                           
+                                                                            <div class="d-inline-block">
+                                                                                <h6>William Jem</h6>
+                                                                               
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>Flatable</td>
+                                                                   
+                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="chk-option">
+                                                                            <div class="checkbox-fade fade-in-primary">
+                                                                                <label class="check-task">
+                                                                                    <input type="checkbox" value="">
+                                                                                    <span class="cr">
+                                                                                                <i class="cr-icon fa fa-check txt-default"></i>
+                                                                                            </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="d-inline-block align-middle">
+                                                                           
+                                                                            <div class="d-inline-block">
+                                                                                <h6>David Jones</h6>
+                                                                              
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>Guruable</td>
+                                                                   
+                                                                    
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <div class="text-right m-r-20">
+                                                                <a href="#!" class=" b-b-primary text-primary">さらに表示</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-            　                               <p></p>
-                
-                                             <!-- 　-->
-                                             <table class="table" id="undefPeople">
-                                                      <thead>
-            <td>
-              お名前
-            </td>
-            <td>
-              住所
-            </td>
-            <td>
-              予想到着時間
-            </td>
-            <td>
-              <h4></h4>
-            </td>
-           </thead>
-
-        　 <tbody>
-           <tr>
-            <td>
-              Aさん
-            </td>
-            <td>
-              中村区○○○○
-            </td>
-            <td>
-              〇〇時〇〇分
-            </td>
-            <td>
-            <button type="button" id="btn" class="btn btn-outline-primary btn-mini">送迎完了</button>
-            </td>
-          </tr>
-
-           <tr>
-            <td>
-             Bさん
-            </td>
-            <td>
-             中区○○○○
-            </td>
-            <td>
-              〇〇時〇〇分
-            </td>
-            <td>
-            <button type="button" id="btn" class="btn btn-outline-primary btn-mini">送迎完了</button>
-            </td>
-            </tr>
-
-          <tr>
-            <td>
-               Cさん
-            </td>
-            <td>
-               中区○○○○
-            </td>
-            <td>
-              〇〇時〇〇分
-            </td>
-            <td>
-            <button type="button" id="btn" class="btn btn-outline-primary btn-mini">送迎完了</button>
-            </td>
-          </tr>
-
-           <tr>
-            <td>
-               Dさん
-            </td>
-            <td>
-              熱田区○○○○
-            </td>
-            <td>
-              〇〇時〇〇分
-            </td>
-            <td>
-            <button type="button" id="btn" class="btn btn-outline-primary btn-mini">送迎完了</button>
-            </td>
-          </tr>
-
-       </tbody>
-       </table>
-
-       <button type="button" id="btn" class="btn btn-outline-primary btn-sm">地図表示</button>
-　　　　<p></p>
-       <div class="card">
-       <div id="map"></div>
-       <p></p>
-
-        </div>  
-                
-
-       </div>
-
-       <!--- -->
+                                            </div>
+                                            <div class="col-xl-4 col-md-12">
+                                                <div class="card ">
+                                                    <div class="card-header">
+                                                        <h5>現在の出席者:5名</h5>
+                                                       
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div class="align-middle m-b-30">
+                                                          
+                                                            <div class="d-inline-block">
+                                                                <h6>Aさん　中村区〇〇</h6>
+                                                            </div>
+                                                        </div>
+                                                        <div class="align-middle m-b-30">
+                                                           
+                                                            <div class="d-inline-block">
+                                                                <h6>Bさん　中区〇〇</h6>
+                                                            </div>
+                                                        </div>
+                                                        <div class="align-middle m-b-30">
+                                                            
+                                                            <div class="d-inline-block">
+                                                                <h6>Cさん　中区〇〇</h6>
+                                                            </div>
+                                                        </div>
+                                                        <div class="align-middle m-b-30">
+                                
+                                                            <div class="d-inline-block">
+                                                                <h6>Dさん　熱田区〇〇</h6>
+                                                            </div>
+                                                        </div>
+                                                        <div class="align-middle m-b-10">
+                                                           
+                                                            <div class="d-inline-block">
+                                                               <h6>Eさん　中区〇〇</h6>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--  project and team member end -->
+                                            <!-- -->
 
 
-       
-                                    <!-- Page-body end -->
+                                <!-- Page-body end -->
                                 </div>
                                 <div id="styleSelector"> </div>
                             </div>
@@ -466,17 +497,10 @@
     <![endif]-->
     <!-- Warning Section Ends -->
     
-
-   <script src="./page02.js"></script>
-
     <!-- Required Jquery -->
 
-      <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgIA_8Jyvo8LMa8J2yS5RemoZkzOBkULI&callback=initMap&libraries=&v=weekly"
-      async
-    ></script>
-
-
+    
+    <script src="./page00.js"></script>
 
     <script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery-ui/jquery-ui.min.js "></script>
