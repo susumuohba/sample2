@@ -112,12 +112,18 @@ directionsRenderer2.setOptions({
 function clicktr(){
    document.getElementById("tr1").style.backgroundColor="#E5EDFD";
 }
-<!---- --->
-function test2(){
-   alert("test2");
-    let tableElem = document.getElementById("undefPeople");
-        
 
+<!-- -->
+function test2(){
+    let tableElem = document.getElementById("undefPeople");
+
+    
+   // 固定でいくつかの要素を削除する 
+     
+   for (let i = 0 ; i < 5 ; i++){
+       tableElem.deleteRow(0);
+   }
+   
      // 固定でいくつかのデータを追加する
         
      /**************************************************************/
