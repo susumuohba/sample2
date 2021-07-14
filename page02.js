@@ -141,7 +141,7 @@ function addCustomer(){
  
 
   // 画面を開く
-  var winObj = window.open("https://main.d2wj7md4yan98g.amplifyapp.com/page022.html", "_blank");
+  var winObj = window.open("https://main.d35izeq5gia0sv.amplifyapp.com/page022.html", "_blank");
   
   delete winObj;
 }
