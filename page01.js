@@ -117,8 +117,7 @@ function test2(){
    alert("test2");
     let tableElem = document.getElementById("undefPeople");
         
-    alert(tableElem); 
-    
+
      // 固定でいくつかのデータを追加する
         
      /**************************************************************/
@@ -194,6 +193,6 @@ function test2(){
      //td要素にテキストを追加
      cellElemC2.appendChild(document.createTextNode('中区○○○○'));
     
-    }
+  
         
 }
